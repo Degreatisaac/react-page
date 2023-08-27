@@ -10,7 +10,7 @@ const Home = () => {
         <Navbar/>
         <div className='home-banner-container'>
             <div className='home-bannerImage-container'>
-                <img src={bannerbackground}/>
+                <img src={bannerbackground} alt='banner'/>
             </div>
             <div className='home-text-section'>
                 <h1 className='primary-heading'>Your Favourite food Delivered Hot & Fresh</h1>
@@ -22,7 +22,7 @@ const Home = () => {
             </div>
 
             <div className='home-image-section'>
-                <img src={BannerImage}/>
+                <img src={BannerImage} alt='banner'/>
             </div>
         </div>
     </div>

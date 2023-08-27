@@ -13,7 +13,7 @@ const Testimonial = () => {
         </div>
 
         <div className='testimonial-section-bottom'>
-            <img src={ProfilePic}/>
+            <img src={ProfilePic} alt='profile'/>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non perspiciatis magni incidunt aliquam facilis harum.</p>
 
             <div className='testimonials-stars-container'>
