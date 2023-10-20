@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import AboutBackground from "../Assets/about-background.png";
 import AboutBackgroundImage from "../Assets/about-background-image.png";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 
 const About = () => {
+
+  useEffect(() => {
+    AOS.init();
+}, []);
+   
+
   return (
     <div className='about-section-container'>
         <div className='about-background-image-container'>
             <img src={AboutBackground} alt="aboutbackground" />
         </div>
 
-        <div className='about-section-image-container'>
+        <div className='about-section-image-container' data-aos='fade-right'>
             <img src={AboutBackgroundImage} alt="aboutbackgroud" />
         </div>
 
-        <div className='about-section-text-container'>
+        <div className='about-section-text-container' data-aos='zoom-in-down'>
            <p className='primary-subheading'>About</p>
            <h1 className='primary-heading'>
             Food is An Important Part of A Balanced Diet

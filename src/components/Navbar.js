@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Logo from "../Assets/Logo.svg";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -16,6 +18,11 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const Navbar = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+       
 
     const [openMenu, setOpenMenu] = useState(false);
     const menuOptions = [
@@ -48,7 +55,7 @@ const Navbar = () => {
     ];
 
   return (
-    <nav>
+    <nav data-aos='zoom-in-down'>
         <div className='nav-logo-container'>
             <img src={Logo} alt="logo"/>
         </div>
